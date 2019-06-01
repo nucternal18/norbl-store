@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nucternal18/norbl-store/static/css/main.fd6826f1.chunk.css",
+    "main.js": "/nucternal18/norbl-store/static/js/main.c5921dce.chunk.js",
+    "main.js.map": "/nucternal18/norbl-store/static/js/main.c5921dce.chunk.js.map",
+    "runtime~main.js": "/nucternal18/norbl-store/static/js/runtime~main.3f5fd1a1.js",
+    "runtime~main.js.map": "/nucternal18/norbl-store/static/js/runtime~main.3f5fd1a1.js.map",
+    "static/css/2.266e55a5.chunk.css": "/nucternal18/norbl-store/static/css/2.266e55a5.chunk.css",
+    "static/js/2.51a7d0f6.chunk.js": "/nucternal18/norbl-store/static/js/2.51a7d0f6.chunk.js",
+    "static/js/2.51a7d0f6.chunk.js.map": "/nucternal18/norbl-store/static/js/2.51a7d0f6.chunk.js.map",
+    "index.html": "/nucternal18/norbl-store/index.html",
+    "precache-manifest.c11ff150999d6b0827c8117ea5d2d423.js": "/nucternal18/norbl-store/precache-manifest.c11ff150999d6b0827c8117ea5d2d423.js",
+    "service-worker.js": "/nucternal18/norbl-store/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/nucternal18/norbl-store/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.fd6826f1.chunk.css.map": "/nucternal18/norbl-store/static/css/main.fd6826f1.chunk.css.map",
+    "static/media/LeatherCase.jpg": "/nucternal18/norbl-store/static/media/LeatherCase.2ac2c4c6.jpg",
+    "static/media/Luxuryprod03.jpg": "/nucternal18/norbl-store/static/media/Luxuryprod03.916976e3.jpg",
+    "static/media/closeupiphonecases.jpg": "/nucternal18/norbl-store/static/media/closeupiphonecases.ac3efb13.jpg",
+    "static/media/colorfuliphone6cases.jpg": "/nucternal18/norbl-store/static/media/colorfuliphone6cases.c9126b4d.jpg",
+    "static/media/iphonecasesforsale.jpg": "/nucternal18/norbl-store/static/media/iphonecasesforsale.367553d9.jpg",
+    "static/media/pileofsmartphonecases.jpg": "/nucternal18/norbl-store/static/media/pileofsmartphonecases.bae7c6ef.jpg"
+  }
+}
