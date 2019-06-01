@@ -1,0 +1,49 @@
+:root {
+    --blue-color: rgba(46, 137, 173, 0.45);
+    --overlay-color: rgba(43, 43, 44, 0.85);
+    --primary-color: rgba(47, 66, 71, 0.45);
+    --overlay-color: rgba(43, 43, 44, 0.85);
+    --menu-speed: 0.75s;
+}
+
+.NavBar{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    /* display: flex;
+    flex-direction: row;
+    list-style: none; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    justify-content: center;
+    margin-left: 3rem;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cart {
+    display: flex;
+    float: right;
+    text-decoration: none;
+}
+
+h4 {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .navbar-brand {
+        float:none !important;
+    }
+    .img-responsive {
+        margin:0 auto !important;
+        display:block !important;
+    }
+}

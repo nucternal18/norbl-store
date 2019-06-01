@@ -1,0 +1,135 @@
+    .ContactForm {
+        background: gray;
+        background-size: cover;
+        color: #fff;
+        height: 100vh;
+        position: relative;
+    
+    }
+    
+    .ContactForm::before {
+        content: '';
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    
+    }
+    
+    .ContactForm .wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 500px;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row
+    
+    }
+    
+    .ContactForm .contact-form {
+        max-height: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 5px;
+        display: flex;
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.13);
+        text-align: center;
+        
+    }
+    
+    .ContactForm .contactInputFields{ 
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        background: transparent;
+        align-items: center;
+        border: 0;
+        padding: 10px 20PX;
+        color: #c5ecfd;
+        width: 100%
+        
+    }
+
+    
+    .ContactForm .contactInputFields,
+    .contact-msg {
+        width: 100%;
+        margin: 10px 20PX;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    
+    
+    .ContactForm .contactInputFields .Input,
+    .contact-msg textarea {
+        margin: 10px 10px;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid #c5ecfd;
+        padding: 10px 10px;
+        color: #c5ecfd;
+        width: 100%;
+        height: 50px;
+    
+    }
+    
+    .contact-msg textarea {
+        padding: 21px 10px;
+        margin-right: 10px;
+        height: 212px;
+    }
+    
+    ::-webkit-input-placeholder {
+        color: #c5ecfd;
+    }
+    
+    ::-moz-input-placeholder {
+        color: #c5ecfd;
+    }
+    
+    ::-ms-input-placeholder {
+        color: #c5ecfd;
+    }
+    
+    .contact-btn {
+        background: aqua;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 150px) and (max-width: 736px){
+
+        .ContactForm .wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .ContactForm .contact-form {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        .ContactForm .contactInputFields .Input,
+        .contact-msg textarea {
+            align-items: center;
+            width: 90%;
+            height: 15px;
+        }
+    }

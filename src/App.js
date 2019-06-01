@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'; // eslint-disable-next-line
+import LeatherCase from './Images/LeatherCase.jpg'
+import Layout from './Components/Layout/Layout';
+import NavBar from './Components/NavBar/NavBar';
+import Catalogue from './Components/Catalogue/Catalogue';
+import Cart from './Components/Cart';
+import ContactForm from './Components/ContactForm/ContactForm';
+import AboutUs from './Components/AboutUs'
+import DefaultError from './Components/ErrorPage/DefaultError';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component {
+  
+  render () {
+    return (
+      <Router>
+        <div className="carousel">
+            <NavBar />
+            <Switch>
+              <Route path="/catalogue" component={Catalogue} />
+              <Route path="/contact_us" component={ContactForm} />
+              <Route path="/about_us" component={AboutUs} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/" exact component={Layout} />
+              <Route component={DefaultError} />
+            </Switch>
+          
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
