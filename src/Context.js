@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, createContext } from 'react';
 import { storeProducts, detailProduct } from './data'; // eslint-disable-next-line
 import ProductDetails from './Components/ProductDetails';
 
 
-const ProductContext = React.createContext({});
+const ProductContext = createContext({});
 //Provider
 //Consumer
 
@@ -36,13 +36,14 @@ class ProductProvider extends Component {
     }
 
     render() {
+        const { children } = this.props;
         return (
             <ProductContext.Provider value={{
                 ...this.state,
                 handleDetail: this.handleDetail,
                 addToCart: this.addToCart,
             }} >
-                {this.props.children}
+                {children}
             </ProductContext.Provider>
         );
     }

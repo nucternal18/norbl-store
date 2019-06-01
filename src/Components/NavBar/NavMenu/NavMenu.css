@@ -115,16 +115,16 @@
 }
 
 /* close menu */
-.NavMenu .toggler:checked ~ .closeMenu {
+.NavMenu .toggler:after ~ .closeMenu {
     visibility: hidden;
 }
 
-.NavMenu .toggler:checked ~ .closeMenu > div {
+.NavMenu .toggler:after ~ .closeMenu > div {
     transform: scale(0);
     transition-duration: var(--menu-speed);
 }
 
-.NavMenu .toggler:checked:after ~ .closeMenu > div > div {
+.NavMenu .toggler:after ~ .closeMenu > div > div {
     opacity: 0;
     transition: opacity o.4s ease-out 0.4s;
 
@@ -142,6 +142,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: transform 0.3s ease-out;
     
 }
 

@@ -11,7 +11,7 @@ const  NavBar = (props) => {
     return (
         <nav className="navbar bg-dark navbar-expand-sm navbar-dark " >
             <div className="mt-2 navbar-nav">
-                    <NavMenu />
+                <NavMenu show={props.show}/>
             </div>
             <div className="mx-auto ">
             <span className="w-100 d-lg-none d-block"/>

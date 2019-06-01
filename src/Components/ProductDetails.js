@@ -8,14 +8,14 @@ class ProductDetails extends Component {
         return (
             <ProductConsumer>
                 
-                {value => { console.log(value.detailProduct);// eslint-disable-next-line
-                    const { id, company, img, info, price, title, inCart } = value.detailProduct;
+                {(value) => { console.log(value.detailProduct);// eslint-disable-next-line
+                    const { id, company, img, description, price, title, inCart } = value.detailProduct;
                     return (
                         <div className="container py-5">
                             {/* Title */}
                             <div className="row">
-                                <div className="col-10 mx-auto text-center text-slanted text-dark my-5">
-                                    <h1>{title}</h1>
+                                <div className="col-10 mx-auto text-center text-slanted my-5">
+                                    <h1 className="text-black-50">{title}</h1>
                                 </div>
                             </div>
                             {/* product info */}
@@ -39,8 +39,8 @@ class ProductDetails extends Component {
                                     <p className="text-capitalize font-weight-bold mt-3 mb-0">
                                         product specification: 
                                     </p>
-                                    <p className="text-muted lead">{info}</p>
-                                    <NavLink to="/">
+                                    <p className="text-muted lead">{description}</p>
+                                    <NavLink to="catalogue">
                                         <ButtonContainer>
                                             back to products
                                         </ButtonContainer>
