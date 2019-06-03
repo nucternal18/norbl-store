@@ -1,4 +1,12 @@
 /* Universal Styles */
+:root {
+  --mainYellow: rgb(219, 219, 98);
+  --blue-color: rgba(46, 137, 173, 0.45);
+  --overlay-color: rgba(43, 43, 44, 0.85);
+  --primary-color: rgba(47, 66, 71, 0.45);
+  --overlay-color: rgba(43, 43, 44, 0.85);
+  --menu-speed: 0.75s;
+}
 
   /* App Styles */
   

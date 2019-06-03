@@ -24,7 +24,7 @@ class ProductDetails extends Component {
                                     <img src={img} className="img-fluid" alt="product"/>
                                 </div>
                                 {/* product text */}
-                                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                                <div className="col-12 mx-auto col-md-5 my-3 mt-0 text-capitalize">
                                     <h3>model: {title}</h3>
                                     <h4 className="text-title text-uppercase text-muted mt3 mb-2">
                                         made by: <span className="text-uppercase">
@@ -45,7 +45,10 @@ class ProductDetails extends Component {
                                             back to products
                                         </ButtonContainer>
                                     </NavLink>
-                                    <ButtonContainer disabled={inCart ? true : false} onClick={() => {
+                                    <ButtonContainer
+                                        cart
+                                        disabled={inCart ? true : false}
+                                        onClick={() => {
                                         value.addToCart(id)
                                     }}>
                                             {inCart ? "inCart" : "add to cart"}
