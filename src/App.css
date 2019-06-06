@@ -1,6 +1,9 @@
 /* Universal Styles */
 :root {
   --mainYellow: rgb(219, 219, 98);
+  --mainDark: #232528;
+  --mainWhite: #f3f3f3;
+  --transition: all 1s linear;
   --blue-color: rgba(46, 137, 173, 0.45);
   --overlay-color: rgba(43, 43, 44, 0.85);
   --primary-color: rgba(47, 66, 71, 0.45);
@@ -40,6 +43,26 @@
       left: 50%;
       transform: translate(-50%, -50%);
           
+      }
+
+      .btn-black {
+        background: transparent;
+        text-transform: capitalize;
+        font-size: 0.8rem !important;
+        color: -var(--mainDark);
+        border-radius: 0 !important;
+        border: 0.1rem solid var(--mainDark) !important;
+      }
+
+      .btn-black:hover {
+        background: var(--mainDark) !important;
+        color: var(--mainWhite) !important
+      }
+
+      .cart-icon{
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: var(--mainYellow);
       }
       
     @media only screen and (max-width: 560px) {

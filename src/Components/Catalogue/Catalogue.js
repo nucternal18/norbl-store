@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Product from '../Product'
-import Title from '../Title/Title';
+import Title from '../Title';
 import './Catalogue.css'; 
 import { ProductConsumer } from '../../Context';
 

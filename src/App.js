@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; // eslint-disable-next-line
 import { ProductProvider } from './Context';
@@ -12,19 +12,20 @@ import ContactForm from './Components/ContactForm/ContactForm';
 import AboutUs from './Components/AboutUs'
 import DefaultError from './Components/ErrorPage/DefaultError';
 import ProductDetails from './Components/ProductDetails';
+import Modal from './Components/Modal'
 
 
 
 class App extends React.Component {
-  state = {
-    display: true,
-  }
+  // state = {
+  //   display: true,
+  // }
 
-  handleDisplay = () => {
-    this.setState({
-      display: false,
-    })
-  }
+  // handleDisplay = () => {
+  //   this.setState({
+  //     display: false,
+  //   })
+  // }
   
   
   render () {
@@ -42,7 +43,7 @@ class App extends React.Component {
               <Route path="/" exact component={Layout} />
               <Route component={DefaultError} />
             </Switch>
-          
+            <Modal />
           </div>
         </ProductProvider>
       </Router>
