@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // eslint-disable-next-line
 import PayPalButton from './PayPalButton';
 
 export default function CartTotal({value, history}) {
@@ -32,7 +32,7 @@ export default function CartTotal({value, history}) {
                             </span>
                             <strong>$ {cartTotal.toFixed(2)}</strong>
                         </h5>
-                        <PayPalButton total={cartTotal} clearCart={clearCart} history={history} />
+                        {/* <PayPalButton total={cartTotal} clearCart={clearCart} history={history} /> */}
                     </div>
                 </div>
             </div>

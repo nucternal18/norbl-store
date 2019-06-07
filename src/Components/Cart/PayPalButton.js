@@ -11,7 +11,7 @@ export default class PayPalButton extends React.Component {
             		// You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
         }
         const onCancel = (data) => {
-            // User pressed "cancel" or close Paypal's popup!
+            // User pressed "cancel" or close PayPal's popup!
             console.log('The payment was cancelled!', data);
             // You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
         }
