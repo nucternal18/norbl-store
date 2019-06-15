@@ -13,7 +13,7 @@
 
   /* App Styles */
   
-  h1 {
+  /* h1 {
     padding: .66rem 0;
     text-align: center;
     background-color: inherit;
@@ -21,21 +21,19 @@
     font-size: 2.0rem;
     font-weight: bold;
     color: rgb(248, 248, 248);
-    }
+    } */
   
     html, body, #container, .carousel {
-      position: relative;
-      display: inline-block;
-      background-color: white;
+      position: absolute;
+      background-color: rgba(218, 218, 218, 0.74);
       font-family: Helvetica, Arial, sans-serif;
       text-align: center;
       height:100%;
-      margin: 0;
       width: 100%;
     }
   
   
-    .text{
+    /* .text{
       position: absolute;
       z-index: 999;
       margin: 0 auto;
@@ -43,9 +41,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
           
-      }
+      } */
 
-      .btn-black {
+      /* .btn-black {
         background: transparent;
         text-transform: capitalize;
         font-size: 0.8rem !important;
@@ -57,24 +55,21 @@
       .btn-black:hover {
         background: var(--mainDark) !important;
         color: var(--mainWhite) !important
-      }
+      } */
 
-      .cart-icon{
+      /* .cart-icon{
         cursor: pointer;
         font-size: 1.2rem;
         color: var(--mainYellow);
-      }
+      } */
       
     @media only screen and (max-width: 560px) {
       html h1 {
         font-size: 25px;
       }
-  
-      .text {
-        top: 42%;
-      }
-      }
       
       input:focus {
       outline: none;
       }
+
+    }

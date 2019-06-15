@@ -4,26 +4,64 @@
 }
 
 .img {
-    height: auto;
-    width: 100%;
-    justify-content: center;
-    image-rendering: optimizeQuality;
+    position: relative;
+    top: 74px;
+    left: 0;
+    right: 0vh;
+    height: 500px;
+    width: 100vw;
+    display: inline-block;
     padding: 0;
-    object-fit: cover;
+    
 }
 
 .LayoutCards {
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
+    width: 98vw;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 20px 5px;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    position: absolute;
+    top: 80vh;
+    left: 0.5vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    background-color: rgb(255, 255, 255);
 }
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 576px) { 
+    .Layout {
+        height: 100%;
+        width: 100%;
+    }
+    
     .img {
+        position: relative;
+        top: 74px;
+        left: 0;
+        right: 0vh;
+        height: 500px;
+        width: 100vw;
+        display: inline-block;
+        padding: 0;
+        
+    }
+    
+    .LayoutCards {
+        width: 95vw;
         height: auto;
-        image-rendering: auto;
+        border: 1px solid #ccc;
+        margin: 20px 5px;
+        padding: 4px;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+        position: absolute;
+        top: 85vh;
+        left: 1vw;
+        display: flex;
+        flex-wrap: inherit;
         
     }
 }

@@ -13,6 +13,7 @@ class ProductProvider extends Component {
         detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
+        menuOpen: false,
         modalProduct: detailProduct,
         cartSubTotal: 0,
         cartTax:0,
@@ -71,6 +72,12 @@ class ProductProvider extends Component {
     closeModal = () => {
         this.setState(() => {
             return {modalOpen: false }
+        })
+    }
+
+    closeMenu = () => {
+        this.setState(() => {
+            return {menuOpen: false }
         })
     }
 
@@ -159,6 +166,7 @@ class ProductProvider extends Component {
                 addToCart: this.addToCart,
                 openModal: this.openModal,
                 closeModal: this.closeModal,
+                closeMenu: this.closeMenu,
                 increment: this.increment,
                 decrement: this.decrement,
                 removeItem: this.removeItem,

@@ -5,35 +5,38 @@ import NavItem from '../NavItem/NavItem';
 
 class NavMenu extends Component {
     state = {
-        display: true,
+        menuOpen: true,
+    }
+
+    handleMenuOpen = () => {
+        this.setState({
+            menuOpen: !this.state.menuOpen
+        });
     }
     
-    handleDisplay = () => {
-        this.setState({
-            display: false,
-        })
-    }
+    
+    
     render() {
+
         return (
+            
             <NavBurger>
-                <div className="navMenu">
-                    <input type="checkbox" className="toggler"></input>
-                    <div className="hamburger"><div></div></div>
-                    <div className="menu">
-                        <div>
+                    <div className="navMenu" >
+                        <input type="checkbox" className="toggler"></input>
+                        <div className="hamburger" ><div></div></div>
+                        <div className={`menu ${(this.state.menuOpen ? 'show' : 'hidden')}`} onClick={() => this.handleMenuOpen} >
+                            <div>
                             <div>
                                 <ul >
-                                    <li ><NavItem link="/" clicked={this.handleDisplay} exact><h4>Home</h4></NavItem></li>
-                                    <li><NavItem link="/catalogue" ><h4>Catalogue</h4></NavItem></li>
-                                    <li><NavItem link="/about_us"><h4>About Us</h4></NavItem></li>
-                                    <li><NavItem link="/contact_us"><h4>Contact Us</h4></NavItem></li>
+                                    <li onClick={() => this.handleMenuOpen} ><NavItem link="/" ><h4>Home</h4></NavItem></li>
+                                    <li onClick={() => this.props.hide} ><NavItem link="/catalogue" ><h4>Catalogue</h4></NavItem></li>
+                                    <li onClick={() => this.props.hide}><NavItem link="/about_us"><h4>About Us</h4></NavItem></li>
+                                    <li onClick={() => this.props.hide}><NavItem link="/contact_us"><h4>Contact Us</h4></NavItem></li>
                                 </ul>
                             </div>
+                            </div>
                         </div>
-            
                     </div>
-
-                </div>
             </NavBurger>
         )
     }
@@ -124,13 +127,13 @@ transform: rotate(90deg);
 
 /* Rotate on hover when checked */
 
-.toggler:checked:hover + .hamburger > div {
+.toggler:checked:hover + .hamburger h4 > div {
 transform: rotate(225deg);
 }
 
 /* Show Menu */
 
-.toggler:checked ~ .menu {
+.toggler:checked ~ .menu  {
 visibility: visible;
 }
 
@@ -139,26 +142,14 @@ transform: scale(1);
 transition-duration: var(--menu-speed);
 }
 
-.toggler:checked ~ .menu > div > div {
+.toggler:checked ~ .menu > div > div  {
 opacity: 1;
 transition: opacity o.4s ease 0.4s;
 
 }
 
-/* close menu */
-.toggler:after ~ .closeMenu {
-visibility: hidden;
-}
-
-.toggler:after ~ .closeMenu > div {
-transform: scale(0);
-transition-duration: var(--menu-speed);
-}
-
-.toggler:after ~ .closeMenu > div > div {
-opacity: 0;
-transition: opacity o.4s ease-out 0.4s;
-
+.closeMenu {
+    display: none
 }
 
 .menu {
@@ -217,6 +208,20 @@ transition: color 0.4s ease;
 h4 {
 color: #fff;
 text-decoration: none;
+}
+
+.closeMenu {
+    background: transparent;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+.closeMenu::before {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+}
+.closeMenu::after {
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
 }
 
 

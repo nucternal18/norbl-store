@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { Component }from 'react'; 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; // eslint-disable-next-line
@@ -16,16 +16,7 @@ import Modal from './Components/Modal'
 
 
 
-class App extends React.Component {
-  // state = {
-  //   display: true,
-  // }
-
-  // handleDisplay = () => {
-  //   this.setState({
-  //     display: false,
-  //   })
-  // }
+class App extends Component {
   
   
   render () {
@@ -33,7 +24,7 @@ class App extends React.Component {
       <Router>
         <ProductProvider>
           <div className="carousel">
-            <NavBar show={this.handleDisplay}/>
+            <NavBar />
             <Switch>
               <Route path="/catalogue" component={Catalogue} />
               <Route path="/contact_us" component={ContactForm} />

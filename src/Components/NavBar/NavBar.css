@@ -7,15 +7,16 @@
 }
 
 .NavBar{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     align-items: center;
     /* display: flex;
     flex-direction: row;
     list-style: none; */
-    top: 0;
-    left: 0;
     z-index: 1;
     text-decoration: none;
 }
