@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <Router>
         <ProductProvider>
-          <div className="carousel">
+          <div >
             <NavBar />
             <Switch>
               <Route path="/catalogue" component={Catalogue} />
