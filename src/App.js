@@ -12,19 +12,20 @@ import ContactForm from './Components/ContactForm/ContactForm';
 import AboutUs from './Components/AboutUs'
 import DefaultError from './Components/ErrorPage/DefaultError';
 import ProductDetails from './Components/ProductDetails';
-import Modal from './Components/Modal'
+import Modal from './Components/Modal';
+
+
 
 
 
 class App extends Component {
-  
-  
+      
   render () {
     return (
       <Router>
         <ProductProvider>
           <div >
-            <NavBar />
+            <NavBar/>
             <Switch>
               <Route path="/catalogue" component={Catalogue} />
               <Route path="/contact_us" component={ContactForm} />
@@ -34,6 +35,20 @@ class App extends Component {
               <Route path="/" exact component={Layout} />
               <Route component={DefaultError} />
             </Switch>
+            <ul className="social-media-container">
+              <li className="social-media twitter">
+                <i className="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/norbl_phoneacessories/" target="">
+                  Follow me on Instagram
+                </a>
+              </li>
+              <li className="social-media facebook">
+                <i className="fab fa-facebook-f"></i>
+                <a href="https://facebook.com/norblPhonecasesandAccessories/" target="">
+                  Like my Facebook page
+                </a>
+              </li>
+            </ul>
             <Modal />
           </div>
         </ProductProvider>

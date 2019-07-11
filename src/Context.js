@@ -13,11 +13,14 @@ class ProductProvider extends Component {
         detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
-        menuOpen: false,
+        menuOpen: true,
         modalProduct: detailProduct,
+        carouselProduct: detailProduct,
         cartSubTotal: 0,
         cartTax:0,
-        cartTotal:0,
+        cartTotal: 0,
+        activeIndex: 0,
+        
     }
     componentDidMount() {
         this.setProducts()
@@ -157,6 +160,48 @@ class ProductProvider extends Component {
         })
     }
 
+    goToSlide = (index) => {
+        this.setState({
+            activeIndex: index
+        });
+    }
+    
+    goToPrevSlide = (e) => {
+        e.preventDefault();
+    
+        let index = this.state.activeIndex;
+        let { slides } = this.props;
+        let slidesLength = slides.length;
+    
+        if (index < 1) {
+            index = slidesLength;
+        }
+    
+        --index;
+    
+        this.setState({
+            activeIndex: index
+        });
+    }
+    
+    goToNextSlide = (e) => {
+        e.preventDefault();
+    
+        let index = this.state.activeIndex;
+        let { slides } = this.props;
+        let slidesLength = slides.length - 1;
+    
+        if (index === slidesLength) {
+            index = -1;
+        }
+    
+        ++index;
+    
+        this.setState({
+            activeIndex: index
+        });
+    }
+
     render() {
         const { children } = this.props;
         return (
@@ -171,6 +216,10 @@ class ProductProvider extends Component {
                 decrement: this.decrement,
                 removeItem: this.removeItem,
                 clearCart: this.clearCart,
+                goToSlide: this.goToSlide,
+                goToPrevSlide: this.goToPrevSlide,
+                goToNextSlide: this.goToNextSlide,
+
             }} >
                 {children}
             </ProductContext.Provider>

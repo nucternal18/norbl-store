@@ -1,19 +1,10 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import NavItem from '../NavItem/NavItem';
+import { ProductConsumer } from '../../../Context';
 
 
 class NavMenu extends Component {
-    state = {
-        menuOpen: true,
-    }
-
-    handleMenuOpen = () => {
-        this.setState({
-            menuOpen: !this.state.menuOpen
-        });
-    }
-    
     
     
     render() {
@@ -21,22 +12,29 @@ class NavMenu extends Component {
         return (
             
             <NavBurger>
-                    <div className="navMenu" >
-                        <input type="checkbox" className="toggler"></input>
-                        <div className="hamburger" ><div></div></div>
-                        <div className={`menu ${(this.state.menuOpen ? 'show' : 'hidden')}`} onClick={() => this.handleMenuOpen} >
-                            <div>
-                            <div>
-                                <ul >
-                                    <li onClick={() => this.handleMenuOpen} ><NavItem link="/" ><h4>Home</h4></NavItem></li>
-                                    <li onClick={() => this.props.hide} ><NavItem link="/catalogue" ><h4>Catalogue</h4></NavItem></li>
-                                    <li onClick={() => this.props.hide}><NavItem link="/about_us"><h4>About Us</h4></NavItem></li>
-                                    <li onClick={() => this.props.hide}><NavItem link="/contact_us"><h4>Contact Us</h4></NavItem></li>
-                                </ul>
-                            </div>
-                            </div>
+                <ProductConsumer>
+                    {value => (
+                            <div className="navMenu" >
+                            <input type="checkbox" className="toggler"></input>
+                            <div className="hamburger" ><div></div></div>
+                            {value.menuOpen ?
+                                <div className="menu">
+                                    <div>
+                                        <div onClick={() => value.closeMenu()}>
+                                            <ul >
+                                                <li><NavItem link="/"><h4 onClick={() => value.closeMenu()}>Home</h4></NavItem></li>
+                                                <li onClick={() => value.closeMenu()} ><NavItem link="/catalogue" ><h4>Catalogue</h4></NavItem></li>
+                                                <li onClick={() => value.closeMenu()}><NavItem link="/about_us"><h4>About Us</h4></NavItem></li>
+                                                <li onClick={() => value.closeMenu()}><NavItem link="/contact_us"><h4>Contact Us</h4></NavItem></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                : null}
                         </div>
-                    </div>
+                        
+                    )}
+                </ProductConsumer>
             </NavBurger>
         )
     }
@@ -199,30 +197,10 @@ padding: 1rem;
 text-decoration: none;
 }
 
-.menu > div > div > ul > li > h4 {
-color: white;
-text-decoration: none;
-transition: color 0.4s ease;
-}
+.NavMenuClosed {
+    display: none;
+} 
 
-h4 {
-color: #fff;
-text-decoration: none;
-}
-
-.closeMenu {
-    background: transparent;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-}
-.closeMenu::before {
-    -webkit-transform: translateY(-6px) rotate(45deg);
-            transform: translateY(-6px) rotate(45deg);
-}
-.closeMenu::after {
-    -webkit-transform: translateY(6px) rotate(-45deg);
-            transform: translateY(6px) rotate(-45deg);
-}
 
 
 ` 

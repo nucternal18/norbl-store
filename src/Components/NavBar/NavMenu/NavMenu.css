@@ -115,20 +115,7 @@
 }
 
 /* close menu */
-.NavMenu .toggler:after ~ .closeMenu {
-    visibility: hidden;
-}
 
-.NavMenu .toggler:after ~ .closeMenu > div {
-    transform: scale(0);
-    transition-duration: var(--menu-speed);
-}
-
-.NavMenu .toggler:after ~ .closeMenu > div > div {
-    opacity: 0;
-    transition: opacity o.4s ease-out 0.4s;
-
-}
 
 .NavMenu .menu {
     position: fixed;
